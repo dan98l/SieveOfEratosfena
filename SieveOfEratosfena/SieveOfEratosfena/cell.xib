@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellForNumbers" id="vPS-5P-Luj" customClass="Cell" customModule="SieveOfEratosfena" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bEj-BU-oqv">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wed-KE-cGO">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wed-KE-cGO" secondAttribute="trailing" id="Uic-Gt-alc"/>
+                            <constraint firstAttribute="bottom" secondItem="wed-KE-cGO" secondAttribute="bottom" id="ayq-No-0Qx"/>
+                            <constraint firstItem="wed-KE-cGO" firstAttribute="top" secondItem="bEj-BU-oqv" secondAttribute="top" id="vuL-xi-aLY"/>
+                            <constraint firstItem="wed-KE-cGO" firstAttribute="leading" secondItem="bEj-BU-oqv" secondAttribute="leading" id="xY7-Yw-hv3"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="bEj-BU-oqv" secondAttribute="trailing" id="1f5-jD-u3B"/>
+                <constraint firstItem="bEj-BU-oqv" firstAttribute="top" secondItem="vPS-5P-Luj" secondAttribute="top" id="cWd-Da-LTo"/>
+                <constraint firstAttribute="bottom" secondItem="bEj-BU-oqv" secondAttribute="bottom" id="cwl-vZ-Qwu"/>
+                <constraint firstItem="bEj-BU-oqv" firstAttribute="leading" secondItem="vPS-5P-Luj" secondAttribute="leading" id="gO1-uD-Fgj"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="C8C-u9-sSg"/>
+            <connections>
+                <outlet property="numberLabel" destination="wed-KE-cGO" id="ON1-0O-F5Z"/>
+            </connections>
+            <point key="canvasLocation" x="48" y="-66"/>
+        </collectionViewCell>
+    </objects>
+</document>

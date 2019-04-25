@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="View" customModule="SieveOfEratosfena" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите число, до которого вы хотите найти все простые числа:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSB-fk-Vv3">
+                                <rect key="frame" x="36" y="79" width="342" height="41"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dMA-sg-npu">
+                                <rect key="frame" x="120" y="144" width="175" height="30"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qiy-lL-vRK">
+                                <rect key="frame" x="185" y="202" width="45" height="30"/>
+                                <state key="normal" title="Найти"/>
+                                <connections>
+                                    <action selector="touchButtonFind:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iau-NS-JeS"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8Xn-h4-cFz">
+                                <rect key="frame" x="0.0" y="277" width="414" height="585"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eaZ-wL-WoM">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="JRq-gH-CCN"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="6Nh-oe-9JD"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8Xn-h4-cFz" firstAttribute="top" secondItem="Qiy-lL-vRK" secondAttribute="bottom" constant="45" id="5iz-11-w1c"/>
+                            <constraint firstItem="gSB-fk-Vv3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="Hhk-qQ-5y5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gSB-fk-Vv3" secondAttribute="trailing" constant="36" id="L62-Bg-qiy"/>
+                            <constraint firstItem="dMA-sg-npu" firstAttribute="top" secondItem="gSB-fk-Vv3" secondAttribute="bottom" constant="24" id="Qsd-zp-W84"/>
+                            <constraint firstItem="Qiy-lL-vRK" firstAttribute="top" secondItem="dMA-sg-npu" secondAttribute="bottom" constant="28" id="VZK-Rd-Wyd"/>
+                            <constraint firstItem="8Xn-h4-cFz" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="XVW-Qj-fLo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dMA-sg-npu" secondAttribute="trailing" constant="119" id="bKl-nr-NZd"/>
+                            <constraint firstItem="8Xn-h4-cFz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="epN-fL-asC"/>
+                            <constraint firstItem="Qiy-lL-vRK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="185" id="mfy-ih-UuA"/>
+                            <constraint firstItem="gSB-fk-Vv3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="rf0-5X-o1h"/>
+                            <constraint firstItem="8Xn-h4-cFz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sSe-6J-p0s"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qiy-lL-vRK" secondAttribute="trailing" constant="184" id="wuB-Np-G8j"/>
+                            <constraint firstItem="dMA-sg-npu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="z1M-ts-nPW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ImputRange" destination="dMA-sg-npu" id="076-g0-7gn"/>
+                        <outlet property="collectionView" destination="8Xn-h4-cFz" id="0Pe-9H-5Xg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
+        </scene>
+    </scenes>
+</document>
